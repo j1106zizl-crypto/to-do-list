@@ -1,0 +1,104 @@
+* {margin:0;padding:0;box-sizing:border-box}
+
+body {
+  font-family: Consolas, monospace;
+  background: #000 url('https://img2.akspic.ru/crops/0/1/2/4/4/144210/144210-noch-nebo-oblako-illustracia-svet-1920x1080.jpg') center/cover fixed;
+  color: #eee;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.wrap {
+  max-width: 480px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+h1 {
+  color: #612222;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.top {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#newTask {
+  flex: 1;
+  padding: 10px;
+  background: #181818;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+}
+
+#newTask:focus { border-color: #ff4444; outline: none; }
+
+#addBtn {
+  padding: 0 16px;
+  background: #771b1b;
+  color: rgb(235, 226, 226);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#addBtn:hover { background: #491616; }
+
+.list { list-style: none; }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+}
+
+.item:last-child { border-bottom: none; }
+
+.actions button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.del { color: #813535; }
+.edit { color: #502222; }
+
+.del:hover { color: #813535; }
+.edit:hover { color: #502222; }
+
+.hint {
+  margin-top: 16px;
+  color: #d4caca;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  body          { padding: 10px; }
+  .wrap         { width: 100%; padding: 0 10px; min-height: auto; }
+  h1            { font-size: 1.6rem; margin-bottom: 20px; }
+  .card         { padding: 16px; }
+  .top          { flex-direction: column; gap: 10px; }
+  #addBtn       { width: 100%; padding: 12px; font-size: 16px; }
+  #newTask      { font-size: 15px; }
+  .task-text    { font-size: 15px; }
+  .hint         { font-size: 13px; }
+}
